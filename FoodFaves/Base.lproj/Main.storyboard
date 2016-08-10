@@ -8,7 +8,7 @@
         <!--Restaurant Form-->
         <scene sceneID="x86-5p-JIr">
             <objects>
-                <viewController id="iDt-bO-z1d" sceneMemberID="viewController">
+                <viewController id="iDt-bO-z1d" customClass="RestaurantFormViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8Sr-3g-tLd"/>
                         <viewControllerLayoutGuide type="bottom" id="UHu-eW-lSm"/>
@@ -42,15 +42,15 @@
             </objects>
             <point key="canvasLocation" x="-586" y="-50"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Restarant List Table View Controller-->
         <scene sceneID="1nk-Tx-LsP">
             <objects>
-                <tableViewController id="kLc-vh-bRe" sceneMemberID="viewController">
+                <tableViewController id="kLc-vh-bRe" customClass="RestarantListTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="tsK-xa-lr0">
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KFm-AU-Kmp">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RestaurantCell" id="KFm-AU-Kmp">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KFm-AU-Kmp" id="lTs-im-7YS">
                                     <autoresizingMask key="autoresizingMask"/>
