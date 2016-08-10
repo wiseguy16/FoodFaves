@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		4A3FD6DF1D5BB3D00023DA28 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3FD6DE1D5BB3D00023DA28 /* main.m */; };
 		4A3FD6E21D5BB3D00023DA28 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3FD6E11D5BB3D00023DA28 /* AppDelegate.m */; };
-		4A3FD6E51D5BB3D00023DA28 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3FD6E41D5BB3D00023DA28 /* ViewController.m */; };
 		4A3FD6E81D5BB3D00023DA28 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A3FD6E61D5BB3D00023DA28 /* Main.storyboard */; };
 		4A3FD6EB1D5BB3D00023DA28 /* FoodFaves.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4A3FD6E91D5BB3D00023DA28 /* FoodFaves.xcdatamodeld */; };
 		4A3FD6ED1D5BB3D00023DA28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A3FD6EC1D5BB3D00023DA28 /* Assets.xcassets */; };
@@ -21,8 +20,6 @@
 		4A3FD6DE1D5BB3D00023DA28 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4A3FD6E01D5BB3D00023DA28 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4A3FD6E11D5BB3D00023DA28 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		4A3FD6E31D5BB3D00023DA28 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		4A3FD6E41D5BB3D00023DA28 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		4A3FD6E71D5BB3D00023DA28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4A3FD6EA1D5BB3D00023DA28 /* FoodFaves.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FoodFaves.xcdatamodel; sourceTree = "<group>"; };
 		4A3FD6EC1D5BB3D00023DA28 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -62,8 +59,6 @@
 			children = (
 				4A3FD6E01D5BB3D00023DA28 /* AppDelegate.h */,
 				4A3FD6E11D5BB3D00023DA28 /* AppDelegate.m */,
-				4A3FD6E31D5BB3D00023DA28 /* ViewController.h */,
-				4A3FD6E41D5BB3D00023DA28 /* ViewController.m */,
 				4A3FD6E61D5BB3D00023DA28 /* Main.storyboard */,
 				4A3FD6EC1D5BB3D00023DA28 /* Assets.xcassets */,
 				4A3FD6EE1D5BB3D00023DA28 /* LaunchScreen.storyboard */,
@@ -152,7 +147,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A3FD6E51D5BB3D00023DA28 /* ViewController.m in Sources */,
 				4A3FD6E21D5BB3D00023DA28 /* AppDelegate.m in Sources */,
 				4A3FD6DF1D5BB3D00023DA28 /* main.m in Sources */,
 				4A3FD6EB1D5BB3D00023DA28 /* FoodFaves.xcdatamodeld in Sources */,
