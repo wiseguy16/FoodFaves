@@ -17,6 +17,12 @@
 		4A3FD6FC1D5BC1AB0023DA28 /* Restaurant.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3FD6FA1D5BC1AB0023DA28 /* Restaurant.m */; };
 		4A3FD7001D5BC2110023DA28 /* RestarantListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3FD6FF1D5BC2110023DA28 /* RestarantListTableViewController.m */; };
 		4A3FD7031D5BC23D0023DA28 /* RestaurantFormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3FD7021D5BC23D0023DA28 /* RestaurantFormViewController.m */; };
+		4A3FD7071D5BE6F10023DA28 /* Playlist.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A3FD7041D5BE6F10023DA28 /* Playlist.png */; };
+		4A3FD7081D5BE6F10023DA28 /* Playlist@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A3FD7051D5BE6F10023DA28 /* Playlist@2x.png */; };
+		4A3FD7091D5BE6F10023DA28 /* Playlist@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A3FD7061D5BE6F10023DA28 /* Playlist@3x.png */; };
+		4A3FD70D1D5BE7380023DA28 /* NowPlaying.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A3FD70A1D5BE7380023DA28 /* NowPlaying.png */; };
+		4A3FD70E1D5BE7380023DA28 /* NowPlaying@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A3FD70B1D5BE7380023DA28 /* NowPlaying@2x.png */; };
+		4A3FD70F1D5BE7380023DA28 /* NowPlaying@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A3FD70C1D5BE7380023DA28 /* NowPlaying@3x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +43,12 @@
 		4A3FD6FF1D5BC2110023DA28 /* RestarantListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestarantListTableViewController.m; sourceTree = "<group>"; };
 		4A3FD7011D5BC23D0023DA28 /* RestaurantFormViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RestaurantFormViewController.h; sourceTree = "<group>"; };
 		4A3FD7021D5BC23D0023DA28 /* RestaurantFormViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestaurantFormViewController.m; sourceTree = "<group>"; };
+		4A3FD7041D5BE6F10023DA28 /* Playlist.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Playlist.png; sourceTree = "<group>"; };
+		4A3FD7051D5BE6F10023DA28 /* Playlist@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Playlist@2x.png"; sourceTree = "<group>"; };
+		4A3FD7061D5BE6F10023DA28 /* Playlist@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Playlist@3x.png"; sourceTree = "<group>"; };
+		4A3FD70A1D5BE7380023DA28 /* NowPlaying.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NowPlaying.png; sourceTree = "<group>"; };
+		4A3FD70B1D5BE7380023DA28 /* NowPlaying@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NowPlaying@2x.png"; sourceTree = "<group>"; };
+		4A3FD70C1D5BE7380023DA28 /* NowPlaying@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NowPlaying@3x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +96,12 @@
 				4A3FD6F11D5BB3D00023DA28 /* Info.plist */,
 				4A3FD6E91D5BB3D00023DA28 /* FoodFaves.xcdatamodeld */,
 				4A3FD6DD1D5BB3D00023DA28 /* Supporting Files */,
+				4A3FD7041D5BE6F10023DA28 /* Playlist.png */,
+				4A3FD7051D5BE6F10023DA28 /* Playlist@2x.png */,
+				4A3FD7061D5BE6F10023DA28 /* Playlist@3x.png */,
+				4A3FD70A1D5BE7380023DA28 /* NowPlaying.png */,
+				4A3FD70B1D5BE7380023DA28 /* NowPlaying@2x.png */,
+				4A3FD70C1D5BE7380023DA28 /* NowPlaying@3x.png */,
 			);
 			path = FoodFaves;
 			sourceTree = "<group>";
@@ -162,8 +180,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A3FD7081D5BE6F10023DA28 /* Playlist@2x.png in Resources */,
+				4A3FD7091D5BE6F10023DA28 /* Playlist@3x.png in Resources */,
+				4A3FD70D1D5BE7380023DA28 /* NowPlaying.png in Resources */,
+				4A3FD70F1D5BE7380023DA28 /* NowPlaying@3x.png in Resources */,
 				4A3FD6F01D5BB3D00023DA28 /* LaunchScreen.storyboard in Resources */,
+				4A3FD7071D5BE6F10023DA28 /* Playlist.png in Resources */,
 				4A3FD6ED1D5BB3D00023DA28 /* Assets.xcassets in Resources */,
+				4A3FD70E1D5BE7380023DA28 /* NowPlaying@2x.png in Resources */,
 				4A3FD6E81D5BB3D00023DA28 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
