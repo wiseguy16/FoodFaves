@@ -52,7 +52,7 @@
             NSLog(@"%hd restRating", self.bRestaurant.restaurantRating);
         }
     }
-   else if (self.goodRestaurants.count > 1)
+    if (self.goodRestaurants.count > 1)
     {
         
         self.bRestaurant = self.goodRestaurants[1];
@@ -62,7 +62,7 @@
         NSLog(@"%hd restRating", self.bRestaurant.restaurantRating);
         
     }
-   else if (self.goodRestaurants.count > 2)
+    if (self.goodRestaurants.count > 2)
     {
         
         self.bRestaurant = self.goodRestaurants[2];
@@ -90,6 +90,7 @@
 
 -(void)viewWillAppear:(BOOL)animated
 {
+    
     [self.tableView reloadData];
 }
 
@@ -114,8 +115,8 @@
     cell.detailTextLabel.text = @"";
     
     cell.textLabel.text = theRestaurant.restaurantName;
-    //cell.detailTextLabel.text = [NSString stringWithFormat:@"%hd / 10", theRestaurant.restaurantRating];
-    cell.detailTextLabel.text = theRestaurant.restaurantNotes;
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%hd / 10", theRestaurant.restaurantRating];
+    //cell.detailTextLabel.text = theRestaurant.restaurantNotes;
     
     return cell;
 }

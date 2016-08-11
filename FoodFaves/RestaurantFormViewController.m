@@ -53,7 +53,7 @@
         NSLog(@"%hd restRating", self.aRestaurant.restaurantRating);
             }
         }
-    else if (self.goodRestaurants.count > 1)
+     if (self.goodRestaurants.count > 1)
     {
         
         self.aRestaurant = self.goodRestaurants[1];
@@ -63,7 +63,7 @@
         NSLog(@"%hd restRating", self.aRestaurant.restaurantRating);
         
     }
-    else if (self.goodRestaurants.count > 2)
+     if (self.goodRestaurants.count > 2)
     {
         
         self.aRestaurant = self.goodRestaurants[2];
@@ -180,7 +180,7 @@
 
 - (IBAction)doneButtonTapped:(UIButton *)sender
 {
-   // [self saveContext];
+    [self saveContext];
     self.coverUpUIView.backgroundColor = [UIColor darkGrayColor];
     self.nameTextField.text = @"";
     self.commentsTextView.text = @"";
