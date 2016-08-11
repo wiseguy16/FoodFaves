@@ -7,8 +7,16 @@
 //
 
 #import "RestarantListTableViewController.h"
+#import "RestaurantFormViewController.h"
+#import "Restaurant.h"
+#import "AppDelegate.h"
+#import <CoreData/CoreData.h>
 
 @interface RestarantListTableViewController ()
+
+@property(strong, nonatomic) NSMutableArray *goodRestaurants;
+@property(strong, nonatomic) NSManagedObjectContext *moc;
+@property (strong, nonatomic) Restaurant *bRestaurant;
 
 @end
 
@@ -16,6 +24,57 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.goodRestaurants = [[NSMutableArray alloc] init];
+    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+    self.moc = appDelegate.managedObjectContext;
+    
+    // This block will fetch our counter objects from Core Data and load them in the tableView
+    NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:NSStringFromClass([Restaurant class])];
+    NSError *error = nil;
+    NSArray *restaurantsFromCoreData = [self.moc executeFetchRequest:fetchRequest error:&error];
+    if (error)
+    {
+        NSLog(@"Could not fetch from moc: %@", [error localizedDescription]);
+    }
+    else
+    {
+        [self.goodRestaurants addObjectsFromArray:restaurantsFromCoreData];
+    }
+    if (self.goodRestaurants.count != 0)
+    {
+        
+        self.bRestaurant = self.goodRestaurants[0];
+        if (self.bRestaurant.restaurantName != nil)
+            //[self configureAnnotations];
+        {
+            NSLog(@"%@ restName", self.bRestaurant.restaurantName);
+            NSLog(@"%@ restNotes", self.bRestaurant.restaurantNotes);
+            NSLog(@"%hd restRating", self.bRestaurant.restaurantRating);
+        }
+    }
+   else if (self.goodRestaurants.count > 1)
+    {
+        
+        self.bRestaurant = self.goodRestaurants[1];
+        //[self configureAnnotations];
+        NSLog(@"%@ restName", self.bRestaurant.restaurantName);
+        NSLog(@"%@ restNotes", self.bRestaurant.restaurantNotes);
+        NSLog(@"%hd restRating", self.bRestaurant.restaurantRating);
+        
+    }
+   else if (self.goodRestaurants.count > 2)
+    {
+        
+        self.bRestaurant = self.goodRestaurants[2];
+        //[self configureAnnotations];
+        NSLog(@"%@ restName", self.bRestaurant.restaurantName);
+        NSLog(@"%@ restNotes", self.bRestaurant.restaurantNotes);
+        NSLog(@"%hd restRating", self.bRestaurant.restaurantRating);
+    }
+    
+
+
+    
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -29,6 +88,11 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    [self.tableView reloadData];
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -36,7 +100,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 5;
+    return self.goodRestaurants.count;
 }
 
 
@@ -44,6 +108,14 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"RestaurantCell" forIndexPath:indexPath];
     
     // Configure the cell...
+    
+    Restaurant *theRestaurant = self.goodRestaurants[indexPath.row];
+    cell.textLabel.text = @"";
+    cell.detailTextLabel.text = @"";
+    
+    cell.textLabel.text = theRestaurant.restaurantName;
+    //cell.detailTextLabel.text = [NSString stringWithFormat:@"%hd / 10", theRestaurant.restaurantRating];
+    cell.detailTextLabel.text = theRestaurant.restaurantNotes;
     
     return cell;
 }

@@ -12,6 +12,9 @@
 
 @interface RestaurantFormViewController : UIViewController
 
+@property(strong, nonatomic) NSMutableArray *goodRestaurants;
+@property(strong, nonatomic) NSManagedObjectContext *moc;
+
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
 @property (weak, nonatomic) IBOutlet UITextView *commentsTextView;
 @property (weak, nonatomic) IBOutlet UIStepper *ratingStepper;

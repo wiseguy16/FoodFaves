@@ -13,8 +13,8 @@
 
 @interface RestaurantFormViewController ()  <UITextViewDelegate>
 
-@property(strong, nonatomic) NSMutableArray *goodRestaurants;
-@property(strong, nonatomic) NSManagedObjectContext *moc;
+//@property(strong, nonatomic) NSMutableArray *goodRestaurants;
+//@property(strong, nonatomic) NSManagedObjectContext *moc;
 
 @property (strong, nonatomic) Restaurant *aRestaurant;
 
@@ -41,7 +41,38 @@
     {
         [self.goodRestaurants addObjectsFromArray:restaurantsFromCoreData];
     }
-    
+    if (self.goodRestaurants.count != 0)
+        {
+        
+        self.aRestaurant = self.goodRestaurants[0];
+        if (self.aRestaurant.restaurantName != nil)
+        //[self configureAnnotations];
+            {
+        NSLog(@"%@ restName", self.aRestaurant.restaurantName);
+        NSLog(@"%@ restNotes", self.aRestaurant.restaurantNotes);
+        NSLog(@"%hd restRating", self.aRestaurant.restaurantRating);
+            }
+        }
+    else if (self.goodRestaurants.count > 1)
+    {
+        
+        self.aRestaurant = self.goodRestaurants[1];
+        //[self configureAnnotations];
+        NSLog(@"%@ restName", self.aRestaurant.restaurantName);
+        NSLog(@"%@ restNotes", self.aRestaurant.restaurantNotes);
+        NSLog(@"%hd restRating", self.aRestaurant.restaurantRating);
+        
+    }
+    else if (self.goodRestaurants.count > 2)
+    {
+        
+        self.aRestaurant = self.goodRestaurants[2];
+        //[self configureAnnotations];
+        NSLog(@"%@ restName", self.aRestaurant.restaurantName);
+        NSLog(@"%@ restNotes", self.aRestaurant.restaurantNotes);
+        NSLog(@"%hd restRating", self.aRestaurant.restaurantRating);
+    }
+
 //    for (Restaurant *i in self.goodRestaurants)
 //    {
 //        NSString *temp = i.restaurantName;
@@ -70,7 +101,13 @@
 {
     BOOL rc = NO;
     if (![textField.text isEqualToString:@""])
+        
     {
+//        if (textField == self.nameTextField)
+//        {
+//            [self.nameTextField becomeFirstResponder];
+//        }
+        
 //        UIView *contentView = [textField superview];
 //        ToDoCell *cell = (ToDoCell *)[contentView superview];
 //        NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
@@ -83,6 +120,7 @@
     
     return rc;  // rc stands for ReturnCode
 }
+
 
 -(void)textViewDidChange:(UITextView *)textView
 {
@@ -103,6 +141,13 @@
    // return rc;  // rc stands for ReturnCode
 }
 
+
+- (IBAction)doneWithTextViewTapped:(UIButton *)sender
+{
+    //self.aRestaurant.restaurantNotes = self.commentsTextView.text;
+    [self.commentsTextView resignFirstResponder];
+    [self saveContext];
+}
 
 
 #pragma mark - Action Handler
@@ -127,6 +172,7 @@
     
     Restaurant *aRestaurant = [NSEntityDescription insertNewObjectForEntityForName: NSStringFromClass([Restaurant class]) inManagedObjectContext:self.moc];
     [self.goodRestaurants addObject:aRestaurant];
+    [self saveContext];
    // [self.tableView reloadData];
     
     
@@ -134,7 +180,12 @@
 
 - (IBAction)doneButtonTapped:(UIButton *)sender
 {
+   // [self saveContext];
     self.coverUpUIView.backgroundColor = [UIColor darkGrayColor];
+    self.nameTextField.text = @"";
+    self.commentsTextView.text = @"";
+    self.ratingLabel.text = @"0";
+    self.ratingStepper.value = 0;
 
 }
 
